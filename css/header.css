@@ -1,0 +1,102 @@
+/* Header container */
+header {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center; /* ensures vertical centering */
+  justify-content: space-between;
+  flex-wrap: wrap; /* for smaller screens */
+}
+
+/* Logo + text section */
+#logo_container {
+  display: flex;
+  align-items: center; /* Align logo + text block vertically */
+  gap: 1rem;
+}
+
+/* Logo wrapper keeps the image centered */
+.logo_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image */
+.logo {
+  max-height: 50px;       /* Prevents logo from overpowering text */
+  height: auto;
+  width: auto;
+  object-fit: contain;    /* Fits without distortion */
+  display: block;
+}
+
+/* Title & clock stacked neatly */
+.logo_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo_text h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#clock {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Navigation */
+#header_container nav {
+  display: flex;
+  align-items: center; /* vertical centering for nav */
+  gap: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+nav a.active {
+  background-color: #ffb400; /* distinct active color */
+  color: black;
+}
+nav a:hover {
+  background-color: #005c97;
+  color: white;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #logo_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header_container nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}
+
+body.light-theme {
+  background-color: white;
+  color: black;
+  
+}
+
+body.dark-theme {
+  background-color: #1e1e1e;
+  /* color: white; */
+}

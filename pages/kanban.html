@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Boards - Chandler Production</title>
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/kanban.css" />
+  <script src="../js/kanban.js" defer></script>
+  <script src="../js/theme.js"></script>
+
+</head>
+<body>
+  <header>
+    <div id="logo_container">
+      <div class="logo_wrapper">
+        <img src="../assets/chandlier2.png" alt="Chandler Logo" class="logo" />
+      </div>
+      <div class="logo_text">
+        <h1>Project Boards</h1>
+        <div id="clock"></div>
+      </div>
+    </div>
+
+    <div id="header_container">
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="task-manager.html">Task Manager</a>
+        <a href="kanban.html" class="active">Project Boards</a>
+        <a href="reports.html">Reports</a>
+        <a href="settings.html">Settings</a>
+        <a href="../index.html" onclick="logout()">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="kanban-board">
+    <div class="kanban-column" data-status="todo">
+      <h2>To Do</h2>
+      <div
+        class="kanban-tasks"
+        id="todo-tasks"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+      >
+        <!-- Tasks will be inserted here dynamically -->
+      </div>
+    </div>
+
+    <div class="kanban-column" data-status="inprogress">
+      <h2>In Progress</h2>
+      <div
+        class="kanban-tasks"
+        id="inprogress-tasks"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+      >
+        <!-- Tasks will be inserted here dynamically -->
+      </div>
+    </div>
+
+    <div class="kanban-column" data-status="done">
+      <h2>Done</h2>
+      <div
+        class="kanban-tasks"
+        id="done-tasks"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+      >
+        <!-- Tasks will be inserted here dynamically -->
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports - Chandler Production</title>
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/reports.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/reports.js" defer></script>
+  <script src="../js/theme.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <div id="logo_container">
+      <div class="logo_wrapper">
+        <img src="../assets/chandlier2.png" alt="Chandler Logo" class="logo" />
+      </div>
+      <div class="logo_text">
+        <h1>Report & Analysis</h1>
+        <div id="clock"></div>
+      </div>
+    </div>
+
+    <div id="header_container">
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="task-manager.html">Task Manager</a>
+        <a href="kanban.html">Project Boards</a>
+        <a href="reports.html" class="active">Reports</a>
+        <a href="settings.html">Settings</a>
+        <a href="../index.html" onclick="logout()">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="report-section">
+      <h2>Production Task Completion</h2>
+      <div class="chart-wrapper">
+        <canvas id="taskChart"></canvas>
+        <div class="custom-legend" id="taskLegend"></div>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <h2>Department Task Distribution</h2>
+      <canvas id="departmentChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+</body>
+
+</html>

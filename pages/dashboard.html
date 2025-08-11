@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chandler Production Dashboard</title>
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/task-manager.css" />
+  <script defer src="../js/dashboard.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/task-manager.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <div id="logo_container">
+      <div class="logo_wrapper">
+        <img src="../assets/chandlier2.png" alt="Chandler Logo" class="logo" />
+      </div>
+      <div class="logo_text">
+        <h1>Dashboard</h1>
+        <div id="clock"></div>
+      </div>
+    </div>
+
+    <div id="header_container">
+      <nav>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="task-manager.html">Task Manager</a>
+        <a href="kanban.html">Project Boards</a>
+        <a href="reports.html">Reports</a>
+        <a href="settings.html">Settings</a>
+        <a href="../index.html" onclick="logout()">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Motivational Quote</h2>
+      <blockquote id="quote">Loading quote...</blockquote>
+      <cite id="author"></cite>
+      <button id="quoteBtn">Get New Quote</button>
+
+    </section>
+
+
+    <section class="card">
+      <h2>Weather Update</h2>
+      <p id="weather">Fetching weather...</p>
+    </section>
+
+    <section class="card">
+      <h2>Task Summary</h2>
+      <ul id="taskStats">
+        <li>Total Tasks: <span id="totalTasks">0</span></li>
+        <li>Due Today: <span id="dueToday">0</span></li>
+        <li>Overdue: <span id="overdue">0</span></li>
+        <li>Completed: <span id="completed">0</span></li>
+      </ul>
+    </section>
+
+    <section class="card quick-actions">
+      <h2>Quick Actions</h2>
+      <!-- <div class="quick-buttons">
+        <button onclick="location.href='task-manager.html'">
+          Task Manager
+        </button>
+        <button onclick="location.href='kanban.html'">
+          Kanban Board
+        </button>
+        <button onclick="location.href='task-manager.html#add'">
+          Add Task
+        </button>
+      </div> -->
+      <section id="taskFormSection">
+      <form id="taskForm">
+        <h2>Create a New Task</h2>
+        <label>Title: <input type="text" id="title" required></label>
+        <label>Description: <textarea id="description"></textarea></label>
+        <label>Category:
+          <select id="category">
+            <option value="Raw Materials">Raw Materials</option>
+            <option value="Assembly">Assembly</option>
+            <option value="Packaging">Packaging</option>
+            <option value="Quality Check">Quality Check</option>
+          </select>
+        </label>
+        <label>Priority:
+          <select id="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </label>
+        <label>Due Date: <input type="date" id="dueDate" required></label>
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+    </section>
+
+  </main>
+</body>
+
+</html>

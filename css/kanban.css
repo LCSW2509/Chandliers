@@ -1,0 +1,37 @@
+
+.kanban-board {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.kanban-column {
+  background: white;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+.kanban-column h2 {
+  text-align: center;
+  color: #333;
+}
+
+.kanban-tasks {
+  min-height: 300px;
+  padding: 1rem;
+  background: #f0f4f8;
+  border-radius: 8px;
+}
+
+.task {
+  background: #ffffff;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-left: 5px solid #005c97;
+  cursor: grab;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
