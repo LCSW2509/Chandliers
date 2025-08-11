@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Count task status
   const statusCounts = {
     todo: 0,
-    completed: 0,
+    done: 0,
     inprogress: 0
   };
 
@@ -34,7 +34,7 @@ const statusColors = ['#f44336', '#2196f3', '#4caf50'];
 const statusData = [
   statusCounts.todo || 0,
   statusCounts.inprogress || 0,
-  statusCounts.completed || 0
+  statusCounts.done || 0
 ];
 
 new Chart(ctx1, {

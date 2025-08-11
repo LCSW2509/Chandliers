@@ -48,9 +48,9 @@ function loadTaskStats() {
   let dueToday = 0, overdue = 0, completed = 0;
 
   tasks.forEach(task => {
-    if (task.status === "Done") completed++;
-    if (task.dueDate === today && task.status !== "Done") dueToday++;
-    if (task.dueDate < today && task.status !== "Done") overdue++;
+    if (task.status === "done") completed++;
+    if (task.dueDate === today && task.status !== "done") dueToday++;
+    if (task.dueDate < today && task.status !== "done") overdue++;
   });
 
   document.getElementById("totalTasks").textContent = tasks.length;
